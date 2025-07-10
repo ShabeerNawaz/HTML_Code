@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style
+        type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h3 {
+            background:rgb(105, 186, 212);
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img{
+            float: right;
+            margin-left: 5px;
+            width: 200px;
+            height: 200px;
+        }
+        </style>
+</head>
+<body>
+    <div>
+        <h1>Dog D.Dog</h1>
+        <h3>about
+            <img src="pet.jpg" alt="Dog Image">
+        </h3>
+        <pre>
+            Woof woof!
+            Hi, I'm Dog. I love <span>User Interface design.</span>
+        </pre>
+        <h3>Courses</h3>
+        <p>here are some courses I've taken:</p>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Title/th>
+                    <th>Semester Taken</th>
+                </tr>
+            </thead>
+            <tr>
+                <td colspan="3">For Credit</td>
+            </tr>
+            <tr>
+                <td>6.765</td>
+                <td>User Interface design</td>
+                <td>Spring 2014</td>
+            </tr>
+            <tr>
+                <td>6.864</td>
+                <td>Artificial Intelligence</td>
+                <td>Fall 2013</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">Listener</td>
+            </tr>
+            <tr>
+                <td>6.452</td>
+                <td>Machine Learning</td>
+                <td>Spring 2013</td>
+            </tr>
+            <tr>
+                <td>6.648</td>
+                <td>database System</td>
+                <td>Spring 2012</td>
+            </tr>
+        </table>
+        <h3>Interests</h3>
+        <p>
+            I am interested <b>HCI</b>, memes, and youtube videos.
+        </p>
+        <h3>Contact</h3>
+        <p>
+            would love to know what kind of pet you 'own'(you'll never own me).submit below!
+        </p>
+        <label for="name">Name: </label><input type="text" id="name" name="name" placeholder="Enter your name"><br>
+        <label for="phylum">phylum: </label><input type="text" id="phylum" name="phylum" placeholder="Enter your phylum"><br>
+        <label for="gender">Gender: </label><input type="text" id="gender" placeholder="Enter your Gender"><br>
+        <input type="button" value="Submit">
+        
+    </div>
+    
+</body>
+</html>

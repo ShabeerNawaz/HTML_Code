@@ -1,0 +1,24 @@
+#main{
+    border:5px solid green
+}
+
+#red{
+    border: 5px solid red;
+}
+#orange{
+    border: 5px solid orange;
+    font-size: 29px;
+}
+.blue{
+    
+    border: 5px solid blue;
+}
+
+h3{
+    display: inline-block;
+    border: 5px solid blueviolet;
+}
+
+.date{
+    font-size: 20px;
+}

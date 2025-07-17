@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes rotate_img{
+            0%{
+                transform: scale(1) rotate(0deg);
+            }
+            100%{
+                transform: scale(2) rotate(180deg);
+            }
+        }
+        .main{
+            width: 800px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .inner img{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+        img:hover{
+            border-radius: 10%;
+            animation: rotate_img 1s forwards;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inner">
+            <img src="pet.jpg" alt="">
+        </div>
+        <div class="inner">
+            <img src="pet.jpg" alt="">
+        </div>
+        <div class="inner">
+            <img src="pet.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes colorChange{
+            0%{
+                background-color: black;
+                left: 0px;
+                top: 0px;
+            }
+            25%{
+                background-color: red;
+                left: 300px;
+                top:0px;
+            }
+            50%{
+                background-color: pink;
+                left: 300px;
+                top:300px;
+
+            }
+            75%{
+                background-color: green;
+                left:0px;
+                top: 300px;
+            }
+            100%{
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @keyframes leftToRight{
+            0%{
+                left: -200%;
+            }
+            100%{
+                left: 120%;
+            }
+        }
+        .main{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            position: relative;
+            /*nimation-duration: 5s;
+            animation-name: colorChange;
+            animation-iteration-count:3;
+
+            linear/ease-in /ease-out
+            */
+            animation: colorChange 5s 0s infinite ease-in-out; 
+        }
+        .car{
+            position: fixed;
+            bottom:0px;
+            left:-200px;
+            animation: leftToRight 5s 0s infinite linear;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="car">
+        <img src="car.webp" alt="car" width="100px">
+    </div>
+</body>
+</html>

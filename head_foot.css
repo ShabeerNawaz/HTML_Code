@@ -1,0 +1,21 @@
+header{
+    background-color: lightseagreen;
+    height: 100px;
+}
+footer{
+    background-color: blue;
+    height: 100px;
+}
+.inner{
+    display: flex;
+}
+.left,.right{
+    width: 30%;
+    background-color: yellow;
+    height: 400px;
+}
+main{
+    background-color: tomato;
+    width: 40%;
+    height: 400px;
+}

@@ -2,19 +2,21 @@
     width: 200px;
     height:300px;
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: transform 2s;
     cursor: pointer;
-    box-shadow: 10px 15px 20px black -5px -10px 20px black;
+    box-shadow: 10px 15px 20px black;
     border-radius: 10px;
     border: 2px solid #a5b1c2;
-    background-color: orangered;
     display: flex;
     justify-self: center;
     align-items: center;
     justify-content: center;
+    background-color: orangered;
 
 }
+
 .card:hover{
-    transform: rotateX(180deg);
+    transform: rotateY(360deg);
+    text-decoration: double;
+    background-color: lightblue;
 }

@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.outer-grey {
+    background-color: #e0e0e0; /* Grey color */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inner-container-grey {
+    background-color: #e0e0e0; /* Grey color */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form-wrapper {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-left h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.contact-left h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-left input[type="text"],
+.contact-left input[type="password"],
+.contact-left textarea {
+    width: calc(100% - 24px); /* Adjust for padding */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+.contact-left input::placeholder,
+.contact-left textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-left textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-left button {
+    background-color: #2980b9; /* Slightly darker blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.contact-right {
+    flex: 1.5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icons-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.twitter { background-color: #1da1f2; }
+.social-icon.pinterest { background-color: #bd081c; }
+.social-icon.google-plus { background-color: #dd4b39; }
+
+.right-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icon-input {
+    position: relative;
+}
+
+.icon-input input {
+    width: calc(100% - 40px);
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon-input i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.contact-right select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #555;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20512%22%3E%3Cpath%20fill%3D%22%23aaa%22%20d%3D%22M250.778%20194.757L128%20322.757%205.222%20194.757c-6.866-6.866-17.952-6.866-24.818%200-6.866%206.866-6.866%2017.952%200%2024.818l136%20136c6.866%206.866%2017.952%206.866%2024.818%200l136-136c6.866-6.866%206.866-17.952%200-24.818-6.866-6.866-17.952-6.866-24.818%200z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 12px top 50%;
+    background-size: 12px;
+}
+
+.contact-right textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 120px;
+    resize: vertical;
+}

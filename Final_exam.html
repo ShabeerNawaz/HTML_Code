@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .calculator {
+      max-width: 300px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #aaa;
+    }
+
+    .calculator h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .calculator label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .calculator input[type="number"],
+    .calculator input[readonly] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .buttons button {
+      flex: 1 1 30%;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background: #3498db;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .buttons button:hover {
+      background: #2980b9;
+    }
+
+    .buttons button.clear {
+      background: #e74c3c;
+    }
+
+    .buttons button.equal {
+      background: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <h2>Simple Calculator</h2>
+
+  <label for="num1">First Number:</label>
+  <input type="number" id="num1">
+
+  <label for="num2">Second Number:</label>
+  <input type="number" id="num2">
+
+  
+  <label for="result">Result:</label>
+  <input type="text" id="result" readonly></input>
+
+  <div class="buttons">
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button class="equal" onclick="calculate('=')">=</button>
+    <button class="clear" onclick="clearFields()">C</button>
+  </div>
+</div>
+
+<script>
+  let operator = '';
+
+  function calculate(op) {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    const resultField = document.getElementById("result");
+
+    if (isNaN(num1) || isNaN(num2)) {
+      resultField.value = "Please enter valid numbers";
+      return;
+    }
+
+    if (op === '=') {
+      if (!operator) {
+        resultField.value = "Choose operator first";
+        return;
+      }
+
+      try {
+        let result;
+        switch (operator) {
+          case '+': result = num1 + num2; break;
+          case '-': result = num1 - num2; break;
+          case '*': result = num1 * num2; break;
+          case '/':
+            if (num2 === 0) throw "Cannot divide by zero";
+            result = num1 / num2;
+            break;
+          default:
+            throw "Unknown operator";
+        }
+
+        resultField.value = result;
+        operator = ''; // reset after equal
+      } catch (err) {
+        resultField.value = "Error: " + err;
+      }
+    } else {
+      operator = op;
+      resultField.value = `Selected: ${operator}`;
+    }
+  }
+
+  function clearFields() {
+    document.getElementById("num1").value = '';
+    document.getElementById("num2").value = '';
+    document.getElementById("result").value = '';
+    operator = '';
+  }
+</script>
+
+</body>
+</html>
